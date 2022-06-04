@@ -5,10 +5,10 @@ import { Livro } from "./livro.model";
 export class LivrosService{
 
     livros: Livro[] = [
-        new Livro('LIV01',"Livro TDD",10.00),
-        new Livro('LIV02',"Livro Flutter",39.90),
-        new Livro('LIV03',"Livro Java",29.20),
-        new Livro('LIV04',"Livro Javascript",15.00),
+        // new Livro('LIV01',"Livro TDD",10.00),
+        // new Livro('LIV02',"Livro Flutter",39.90),
+        // new Livro('LIV03',"Livro Java",29.20),
+        // new Livro('LIV04',"Livro Javascript",15.00),
 
     ]
 
