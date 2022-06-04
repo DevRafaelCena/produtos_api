@@ -10,28 +10,28 @@ export class LivrosControler {
     }
     
     @Get()
-    obterTodos(): Livro[] {
+    async obterTodos(): Promise<Livro[]> {
         return this.livrosService.obterTodos()
     }
 
     @Get('/:id')
-    obertUm(@Param() params): Livro {
+    async obertUm(@Param() params): Promise<Livro> {
         return this.livrosService.obterUm(params.id)
     }
 
     @Post()
-    criar(@Body() produto:Livro){
+    async criar(@Body() produto:Livro){
         produto.id = 100
         this.livrosService.criar(produto) 
     }
 
     @Put()
-    alterar(@Body() produto: Livro):Livro{
+    async alterar(@Body() produto: Livro): Promise<[number]>{
         return this.livrosService.alterar(produto)
     }
 
     @Delete('/:id')
-    apagar(@Param() params){
+    async apagar(@Param() params){
         this.livrosService.apagar(params.id)
     }
 
